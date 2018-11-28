@@ -26,7 +26,7 @@ public class HomeController {
 	 */
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+		logger.info("Welcome home! The client locale is {}.     ", locale);
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
@@ -38,9 +38,13 @@ public class HomeController {
 		return "home";
 	}
 	@ResponseBody
-	@RequestMapping(value="/ee")
+	@RequestMapping(value="/test")
 	public String  Test() {
 		return "test";
+	}
+
+	public String WW(){
+		return  "ss";
 	}
 	
 }
